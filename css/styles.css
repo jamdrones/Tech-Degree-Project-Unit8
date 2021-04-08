@@ -1,0 +1,134 @@
+/* --- MAIN ELEMENTS ----- */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body{
+    position: relative;
+    background-color: #F5F5F5;
+    color: #495359;
+    margin: auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 25px 10px;
+    text-align: center;
+    font-size: 1.75em;
+}
+
+h2 {
+    font-size: 1.15em;
+}
+
+p {
+    font-size: 0.85em;
+    line-height: 1;
+}
+
+.card .avatar {
+    float: left;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    grid-area: avatar;
+}
+
+.card .text-container {
+    float: right;
+    display: inline-block;
+    grid-area: text;
+
+}
+
+
+
+/* --- GRID LAYOUT ----- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    margin: 25px;
+    
+}
+
+.card {
+    display: grid;
+    grid-template-areas: "avatar text";
+    align-content: space-evenly;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    height: 200px;
+}
+
+/* --- OVERLAY ----- */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+    width: 375px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media (min-width: 1024px) {
+
+    body{
+        margin: 40px;
+    }
+
+    h1 {
+        text-align: left;
+        margin: 5px 0px 20px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.75em;
+    }
+
+  
+
+    .grid-container {
+        max-width: 1700px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: space-evenly;
+        margin: auto;
+    }
+}
