@@ -39,7 +39,6 @@ p {
 }
 
 .card .text-container {
-    float: right;
     display: inline-block;
     grid-area: text;
 
